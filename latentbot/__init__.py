@@ -1,0 +1,1 @@
+from latentbot import cogs

@@ -2,7 +2,7 @@
 
 [project]
 name = "latentbot"
-version = "0.1.0"
+version = "0.2.0"
 description = ""
 authors = [{ name = "Alex Lipscomb", email = "johnalipscomb@gmail.com" }]
 dependencies = ["py-cord>=2.4.1", "python-dotenv>=1.0.0"]
