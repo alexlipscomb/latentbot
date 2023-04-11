@@ -1,0 +1,15 @@
+---
+version: "3.8"
+services:
+  bot:
+    build:
+      context: "."
+      dockerfile: "Dockerfile"
+    container_name: "latentbot"
+    environment:
+      DISCORD_TOKEN: ${DISCORD_TOKEN}
+    volumes:
+      - ./userdata/:/project/userdata
+    deploy:
+      restart_policy:
+        condition: "unless-stopped"

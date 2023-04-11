@@ -15,6 +15,18 @@ bot = bridge.Bot(
     command_prefix=commands.when_mentioned_or("%"),
 )
 
+print("starting bot")
+
+
+@bot.command("frig")
+async def frig(ctx):
+    ctx.send("frig")
+
+
+@bot.event
+async def on_ready():
+    print(f"{bot.user} is online")
+
 
 if __name__ == "__main__":
     load_cogs(bot, Path(os.path.dirname(__file__)))
