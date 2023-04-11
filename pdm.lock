@@ -72,6 +72,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "python-dotenv"
+version = "1.0.0"
+requires_python = ">=3.8"
+summary = "Read key-value pairs from a .env file and set them as environment variables"
+
+[[package]]
 name = "typing-extensions"
 version = "4.5.0"
 requires_python = ">=3.7"
@@ -90,7 +96,7 @@ dependencies = [
 [metadata]
 lock_version = "4.2"
 groups = ["default"]
-content_hash = "sha256:8bb74a58539153daa210ac2258ac80a5740ae88b66f161bb65a9dae55ffcb3c2"
+content_hash = "sha256:73b74d9fe68456f5cc6d6ab51ff601565c9edf74a8fac958bf629bd44a46e4f9"
 
 [metadata.files]
 "aiohttp 3.8.4" = [
@@ -430,6 +436,10 @@ content_hash = "sha256:8bb74a58539153daa210ac2258ac80a5740ae88b66f161bb65a9dae55
 "py-cord 2.4.1" = [
     {url = "https://files.pythonhosted.org/packages/d1/91/56f1d3661559d90a4fc4f118af06e48a5c46c44b38fb9e3cd978e06ad020/py_cord-2.4.1-py3-none-any.whl", hash = "sha256:862a372c364cd263e2c8e696c64887f969c02cbdf0fdd6b09f0283e9dd67a290"},
     {url = "https://files.pythonhosted.org/packages/d8/54/6df4654bf8276724ae4a497429ecd355252154bd501c118f220507f17ce9/py-cord-2.4.1.tar.gz", hash = "sha256:0266c9d9a9d2397622a0e5ead09826690e688ba3cf14c470167b81e6cd2d8a56"},
+]
+"python-dotenv 1.0.0" = [
+    {url = "https://files.pythonhosted.org/packages/31/06/1ef763af20d0572c032fa22882cfbfb005fba6e7300715a37840858c919e/python-dotenv-1.0.0.tar.gz", hash = "sha256:a8df96034aae6d2d50a4ebe8216326c61c3eb64836776504fcca410e5937a3ba"},
+    {url = "https://files.pythonhosted.org/packages/44/2f/62ea1c8b593f4e093cc1a7768f0d46112107e790c3e478532329e434f00b/python_dotenv-1.0.0-py3-none-any.whl", hash = "sha256:f5971a9226b701070a4bf2c38c89e5a3f0d64de8debda981d1db98583009122a"},
 ]
 "typing-extensions 4.5.0" = [
     {url = "https://files.pythonhosted.org/packages/31/25/5abcd82372d3d4a3932e1fa8c3dbf9efac10cc7c0d16e78467460571b404/typing_extensions-4.5.0-py3-none-any.whl", hash = "sha256:fb33085c39dd998ac16d1431ebc293a8b3eedd00fd4a32de0ff79002c19511b4"},

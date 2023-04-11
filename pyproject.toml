@@ -9,6 +9,7 @@ authors = [
 ]
 dependencies = [
     "py-cord>=2.4.1",
+    "python-dotenv>=1.0.0",
 ]
 requires-python = ">=3.9"
 license = {text = "MIT"}
