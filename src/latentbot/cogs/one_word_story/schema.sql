@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS channels (
+  channel_id INTEGER NOT NULL,
+  guild_id INTEGER PRIMARY KEY NOT NULL,
+  date_updated TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS stories (
+  id INTEGER PRIMARY KEY NOT NULL,
+  guild_id INTEGER NOT NULL,
+  created_by INTEGER NOT NULL,
+  story TEXT NOT NULL,
+  upvotes INTEGER NOT NULL DEFAULT 0,
+  downvotes INTEGER NOT NULL DEFAULT 0,
+  date_created TEXT NOT NULL
+);
