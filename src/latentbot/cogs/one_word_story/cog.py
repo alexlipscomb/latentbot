@@ -29,7 +29,9 @@ class OneWordStory(commands.Cog):
     ows = SlashCommandGroup("ows")
 
     @ows.command()
-    async def createstory(self, ctx: bridge.BridgeApplicationContext, length: discord.Option(int)):  # type: ignore
+    async def createstory(
+        self, ctx: bridge.BridgeApplicationContext, length: discord.Option(int)  # type: ignore
+    ):
         """Create a story"""
         await ctx.respond("Command under construction", ephemeral=True)
 
@@ -39,6 +41,7 @@ class OneWordStory(commands.Cog):
         self, ctx: bridge.BridgeApplicationContext, channel: discord.Option(discord.SlashCommandOptionType.channel)  # type: ignore
     ):
         """Set the channel that stories will be generated from"""
+        channel: TextChannel
         guild_id = ctx.guild_id
 
         if guild_id is None:
@@ -47,11 +50,8 @@ class OneWordStory(commands.Cog):
             )
             return
 
-        channel: TextChannel = channel
-
-        conn = self.__get_conn()
-        db.set_channel(conn, channel.id, guild_id)
-        conn.close()
+        with self.__get_conn() as conn:
+            db.set_channel(conn, channel.id, guild_id)
 
         await ctx.respond(
             f"Set {channel.mention} as the one word story channel", ephemeral=True
