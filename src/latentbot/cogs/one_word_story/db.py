@@ -1,5 +1,6 @@
 import sqlite3
 from datetime import datetime
+from typing import Optional
 
 DB_NAME = "one_word_story.db"
 SCHEMA_NAME = "schema.sql"
@@ -24,3 +25,15 @@ def set_channel(conn: sqlite3.Connection, channel_id: int, guild_id: int) -> Non
     cursor = conn.cursor()
     cursor.execute(query, (channel_id, guild_id, date_updated))
     conn.commit()
+
+
+def get_channel(conn: sqlite3.Connection, guild_id: int) -> Optional[int]:
+    query = """
+    SELECT channel_id FROM channels WHERE guild_id = ?
+    """
+
+    cursor = conn.cursor()
+    cursor.execute(query, (guild_id,))
+    result = cursor.fetchone()
+
+    return result[0] if result else None
