@@ -2,13 +2,9 @@
 
 [project]
 name = "latentbot"
-version = "0.2.0"
+version = "0.3.0"
 description = ""
 authors = [{ name = "Alex Lipscomb", email = "johnalipscomb@gmail.com" }]
-dependencies = [
-    "py-cord>=2.4.1",
-    "python-dotenv>=1.0.0",
-    "nltk>=3.8.1",
-]
+dependencies = ["py-cord>=2.4.1", "python-dotenv>=1.0.0", "nltk>=3.8.1"]
 requires-python = ">=3.9"
 license = { text = "MIT" }
